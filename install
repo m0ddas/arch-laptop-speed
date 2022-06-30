@@ -29,7 +29,7 @@ pacman-key --populate archlinux
 passwd
 
 #temp string for testing
-pacman -S --noconfirm efibootmgr xorg xorg-server gdm gnome networkmanager gedit gnome-tweaks gparted sudo fuse libreoffice-fresh-sv firefox vlc qbittorrent htop p7zip unrar unarchiver lzop lrzip git fish wine wine-gecko wine-mono winetricks lutris steam nvidia nvidia-settings nvidia-utils lib32-nvidia-utils opencl-nvidia lib32-opencl-nvidia vulkan-icd-loader lib32-vulkan-icd-loader libvdpau libxnvctrl
+pacman -S --noconfirm efibootmgr xorg xorg-server gdm gnome networkmanager gedit gnome-tweaks gparted sudo fuse firefox htop p7zip unrar unarchiver lzop lrzip git nvidia nvidia-settings nvidia-utils lib32-nvidia-utils opencl-nvidia lib32-opencl-nvidia vulkan-icd-loader lib32-vulkan-icd-loader libvdpau libxnvctrl
 
 # Preparing boot partition and installing systemd-boot
 bootctl --path=/boot install
