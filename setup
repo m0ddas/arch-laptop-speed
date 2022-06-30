@@ -1,0 +1,23 @@
+#!/bin/bash
+# Formatting drives and setting up swap
+mkfs.fat -F32 /dev/sdb1
+mkswap /dev/sdb2
+swapon /dev/sdb2
+mkfs.ext4 /dev/sdb3
+#mkfs.ext4 /dev/sdb4
+
+# Mounting root partition
+mount /dev/sdb3 /mnt
+
+# Installing base system
+pacstrap /mnt base base-devel linux linux-firmware nano
+
+# Generating /etc/fstab on new system
+genfstab -U /mnt >> /mnt/etc/fstab
+
+# Moving configuration files to new system
+mv install /mnt
+mv user /mnt
+
+# Chroot into new system
+arch-chroot /mnt
