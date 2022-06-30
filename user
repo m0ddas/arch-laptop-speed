@@ -1,0 +1,17 @@
+#!/bin/bash
+# Installing git and yay
+cd /opt
+sudo git clone https://aur.archlinux.org/yay-git.git
+sudo chown -R modda:modda ./yay-git
+cd yay-git
+makepkg -si
+
+# Updating yay
+yay -Syy
+
+# Installing and enabling System76-power
+yay -S system76-power
+
+# Changing shell to fish
+chsh -s /usr/bin/fish
+sudo chsh -s /usr/bin/fish
