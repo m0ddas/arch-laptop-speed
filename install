@@ -37,7 +37,7 @@ echo "default arch*" | tee /boot/loader/loader.conf
 echo "title Arch Linux" | tee -a /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" | tee -a /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" | tee -a /boot/loader/entries/arch.conf
-echo "options root=/dev/nvme0n1p3 rw" | tee -a /boot/loader/entries/arch.conf
+echo "options root=/dev/sda1 rw" | tee -a /boot/loader/entries/arch.conf
 
 # Enabling Services and adding accounts
 systemctl enable gdm.service
